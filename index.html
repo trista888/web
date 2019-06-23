@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>淘屏</title>
+		<meta name="keywords" content="淘屏,淘屏有限公司,TAOP,淘克,淘屏优选店,淘克券,线下流量,社区广告,电梯广告,电梯广告投放,电梯电视,电梯媒体">
+    	<meta name="description" content="淘屏有限公司是美国纳斯达克上市公司（股票代码：TAOP），作为梯视媒体领域的一股新势力，淘屏以互联网+思维打造全新电梯媒体广告模式，通过广告互动的形式，让消费者线下主动观看电梯广告的同时，有效参与广告互动活动，引流消费者到店消费，实现广告商家品牌推广与效果增长同行。">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta name="renderer" content="webkit">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <link rel='shortcut icon' href='img/web_logo.ico' type='image/x-icon' />
+	    <link rel="stylesheet" href="css/bootstrap.min.css" />
+	    <link rel="stylesheet" href="css/fullpage.min.css">
+
+	    <link rel="stylesheet" href="css/common.css">
+	    <style>
+				.title, .subtitle,
+				.around,.section4,
+				.section4 .num>div>div,
+				.section4 .more,
+				.section4 .desc,
+				#fp-nav ul, .fp-slidesNav ul { text-align: center; }
+
+				#header { position: relative; }
+	   		div { color: #555; font-size: 16px; }
+	   		.slide1 { background: url(img/index_banner.png) no-repeat; background-size: auto 100%; }
+	   		.section2 {  background-color: #121C25; }
+	   		.group { width: 1200px; height: 100%; margin: 0 auto; }
+	   		.title, .subtitle { color: #FFF;  }
+	   		.subtitle:after { display: block; content: ''; width: 162px; height: 1px; margin: 20px auto;  background-color: #BDBDBD; }
+	   		.title { margin-top: 40px; font-size: 24px; color: #DCDCDC; }
+	   		.subtitle { font-size: 29px; }
+	   		.wrap-row {  margin: 40px 0 0 0; }
+	   		.wrap { float: left; width: auto; -webkit-transition: all ease-in-out .5s; -ms-transition: all ease-in-out .5s; -moz-transition: all ease-in-out .5s; transition: all ease-in-out .5s; }
+				.wrap:nth-child(1) { left: 0; -webkit-transform: translateX(-200%);-ms-transform: translateX(-200%);-moz-transform: translateX(-200%); transform: translateX(-200%); }
+				.wrap:nth-child(2) { top: 100px; -webkit-transform: translateY(-200%); -ms-transform: translateY(-200%); -moz-transform: translateY(-200%); transform: translateY(-200%); }
+				.wrap:nth-child(3) { right:0; -webkit-transform: translateX(200%); -ms-transform: translateX(200%); -moz-transform:  translateX(200%); transform:  translateX(200%); }
+				.wrap-row>.wrap:nth-child(1).current,.wrap-row>.wrap:nth-child(3).current { transform: translateX(0);}
+				.section3 .current>div.lf1,.section3 .current>div.lf2,.section3 .current>div.rt1,.section3 .current>div.rt2 { -webkit-transform: translate(0,0); -ms-transform: translate(0,0); -moz-transform: translate(0,0); transform: translate(0,0); }
+				.wrap-row>.wrap:nth-child(2).current { -webkit-transform: translateY(0); -ms-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
+
+	   		.wrap>div { color: #FFF; box-sizing: border-box; }
+	   		.wrap>div:hover { color: #ffc600; }
+	   		.fr { float: right; }
+	   		.mt10 { margin-top: 10px; }
+	   		.pl30 { padding-left: 30px; }
+	   		.pr50 { padding-right: 50px; }
+	   		.section3 {  background: url(img/index_section3bg.png) no-repeat center; }
+	   		.around {position: relative; margin: 0 auto; width: 914px; height: 100%; background: url(img/index_img4.png) no-repeat center; background-size: contain; }
+	   		.lf1,.lf2,.rt1,.rt2  { position: absolute; -webkit-transition: all ease-in-out .5s; -ms-transition: all ease-in-out .5s; -moz-transition: all ease-in-out .5s; transition: all ease-in-out .5s; }
+				.around>div.lf1 { top: 227px; left: -200px; -webkit-transform: translate(-200%,0); -ms-transform: translate(-200%,0); -moz-transform: translate(-200%,0); transform: translate(-200%,0); }
+				.around>div.lf2 { top: 388px; left: -200px; -webkit-transform: translate(-200%,-200%); -ms-transform: translate(-200%,-200%); -moz-transform: translate(-200%,-200%); transform: translate(-200%,-200%); }
+				.around>div.rt1 { top: 227px; right: -100px; -webkit-transform: translate(400%,0); -ms-transform: translate(400%,0); -moz-transform: translate(400%,0); transform: translate(400%,0); }
+				.around>div.rt2 { top: 388px; right: -100px; -webkit-transform: translate(400%,400%); -ms-transform: translate(400%,400%); -moz-transform: translate(400%,400%); transform: translate(400%,400%); }
+
+				.around>div>div { display: inline-block; }
+	   		.around>div>div * { color: #FFF; }
+	   		.section4 { background: url(img/index_section4bg.png) no-repeat; background-size: cover; }
+				.section4 * { color:#BCAE84; }
+				.section4 .group { max-width: 1090px; filter: alpha(opacity=0); opacity: 0; -webkit-transition: all ease-in-out .5s; -ms-transition: all ease-in-out .5s; -moz-transition: all ease-in-out .5s; transition: all ease-in-out .5s; }
+				.section4 .title { font-size: 28px; margin-top: 100px; margin-bottom: 20px; }
+				.section4 .num { margin-top: 60px; display: -webkit-flex; display: flex; justify-content: space-between; }
+				.section4 .num>div { display: inline-block; }
+				.section4 .num>div>div { width: 198px; font-size: 18px; }
+				#core,#city,#brand,#crowd { font-size: 60px; }
+	   		.section4 .more { display: block; width: 207px; height: 49px; line-height: 49px; margin: 100px auto 0 auto; border: 1px solid #BCAE84; border-radius: 30px; letter-spacing: 10px; }
+				.section4 .more:hover { filter: alpha(opacity=80); opacity: 0.8; }
+				.section4 .more>span { display: inline-block; width: 30px; height: 1px; vertical-align: middle; background-color: #BCAE84; }
+				.section4 .more:after { display: inline-block; content: ''; width: 8px; height: 8px; margin-left: -8px; border: 1px solid transparent; border-top-color: #BCAE84; border-right-color: #BCAE84; transform: rotate(45deg); }
+				.section5 { position: relative; }
+				.section5 .topimg { width: 100%; }
+				.section5 .fp-tableCell { display: block !important; }
+	   		footer { position: absolute; bottom: 0; left: 0; width: 100%; }
+	   		.block-cen { display: block; margin: 0 auto; }
+				.contact>.txt,.contact-tips { margin-top: 30px; }
+	   		.contact>.txt { font-size: 24px; color: #999; }
+	   		.contact>.txt-en { font-size: 29px; }
+	   		.contact-tips { display: -webkit-flex; display: flex; justify-content: space-around; }
+				/*轮播导航原点相关设置*/
+				.fp-slidesNav ul li a span { background: #FFF; }
+				.fp-slidesNav.fp-bottom { bottom: 90px; }
+
+	    </style>
+	</head>
+	<body>
+		<!--头部文件-->
+
+		<script type="text/javascript" src="js/head.js" charset="utf-8"></script>
+		<div id="fullpage">
+			<div class="section section1">
+				<div class="slide slide1"></div>
+				<div class="slide slide1"></div>
+				<div class="slide slide1"></div>
+				<div class="slide slide1"></div>
+			</div>
+			<div class="section section2">
+				<div class="group">
+					<div class="title">营销矩阵</div>
+					<div class="subtitle">Marketing matrix</div>
+					<div class="wrap-row">
+						<div class="wrap">
+							<img src="img/index_img1.png">
+							<div class="mt10">店铺营销</div>
+							<div>Store marketing <img class="fr" src="img/index_arr.png"></div>
+						</div>
+						<div class="wrap">
+							<div class="mt10 pl30">红包互动营销</div>
+							<div class="pl30 pr50">Interactive Marketing <img class="fr" src="img/index_arr.png"></div>
+							<img src="img/index_img2.png">
+						</div>
+						<div class="wrap">
+							<img src="img/index_img3.png">
+							<div class="mt10">营销大数据</div>
+							<div>Marketing big data <img class="fr" src="img/index_arr.png"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section section3">
+				<div class="group">
+					<div class="around">
+						<div class="title">营销优势</div>
+						<div class="subtitle">Marketing advantage</div>
+						<div class="lf1">
+							<img src="img/index_img4_lf1.png">
+							<div>
+								<div>双屏互动引流</div>
+								<div>Dual-screen interactive attraction  marketing</div>
+							</div>
+						</div>
+						<div class="lf2">
+							<img src="img/index_img4_lf2.png">
+							<div>
+								<div>双屏内容传播</div>
+								<div>Dual-screen content communication</div>
+							</div>
+						</div>
+						<div class="rt1">
+							<div>
+								<div style="text-align: right;">双屏获取数据</div>
+								<div>Dual-screen data acquisition</div>
+							</div>
+							<img src="img/index_img4_rt1.png">
+						</div>
+						<div class="rt2">
+							<div>
+								<div style="text-align: right;">数据驱动转化</div>
+								<div>Data driven conversion</div>
+							</div>
+							<img src="img/index_img4_rt2.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section section4">
+					<div class="group">
+						<div class="title">淘屏与众多优秀公司达成战略合作</div>
+						<div class="desc">淘屏不仅有 “淘屏联盟” 共享平台，同时引入互联网创新成果，覆盖人群超过2亿。<br/>“要推广，上淘屏” ，淘屏与众多优秀企业、公司、品牌达成战略合作，他们认可、信赖淘屏推广。</div>
+						<div class="num">
+							<div>
+								<div id="core">0</div>
+								<div>核心省（市）</div>
+							</div>
+							<div>
+								<div id="city">0</div>
+								<div>全国城市</div>
+							</div>
+							<div>
+								<div id="brand">0</div>
+								<div>品牌客户</div>
+							</div>
+							<div>
+								<div id="crowd">0</div>
+								<div>覆盖人群</div>
+							</div>
+						</div>
+						<a class="more" href="#">查看更多<span></span></a>
+					</div>
+			</div>
+			<div class="section section5">
+				<div>
+					<img class="topimg" src="img/index_section5bg.png">
+					<div class="group contact">
+						<div class="txt">联系我们</div>
+						<div class="txt-en">CONTACT</div>
+						<div class="contact-tips">
+							<div>
+								<img src="img/index_addr.png">
+								<div>中国 · 深圳 · 总部地址 </div>
+								<div>深圳市福田区竹子林光大银行大厦21层</div>
+							</div>
+							<div>
+								<img src="img/index_phone.png">
+								<div class="mt10">联系电话：86-755-82734369 </div>
+							</div>
+							<div>
+								<img src="img/index_code.png">
+								<div class="mt10">官方二维码，扫一扫了解更多 </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--描述：底部文件-->
+				<script type="text/javascript" src="js/foot.js" charset="utf-8"></script>
+			 </div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/fullpage.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
+		<script>
+			$(function(){
+				$('#header .nav-div').eq(0).addClass('on');
+				$('#fullpage').fullpage({
+						loopBottom: true,//滚动到最低部后是否连续滚动到顶部
+						controlArrows: false,//slide的左右箭头显示
+				 		slidesNavigation: true,//显示轮播导航
+						slidesNavPosition: 'bottom',//定位轮播导航在底部
+				    onLeave: function(res){
+				    	var index = res.index;
+							if(index == 0){
+								$("#header").slideUp();
+							}else if(index == 1){
+									$(".wrap-row>.wrap").removeClass("current");
+							}else if(index == 2){
+									$('.section3').find('.around').removeClass('current');
+							}else if(index == 3) {
+								$(".section4 .group").css({"filter": "alpha(opacity=0)", "opacity":"0"});
+								$("#core").html(0);
+								$("#city").html(0);
+								$("#brand").html(0);
+								$("#crowd").html(0);
+							}
+				    },
+				    afterLoad: function(anchorLink,res){
+				    	var index = res.index;
+							if(index == 0){
+								$("#header").slideDown();
+							}else if(index == 1){
+								$(".wrap-row>.wrap").addClass("current");
+							}else if(index == 2){
+								$('.section3').find('.around').addClass('current');
+				    	}else if(index == 3){
+								$(".section4 .group").css({"filter": "alpha(opacity=1)", "opacity":"100"});
+								setNum('core',20,5);
+								setNum('city',150,50);
+								setNum('brand',3000,1000);
+								setNum('crowd',2,1);
+							}
+				    },
+				});
+				setInterval(function(){
+						 $.fn.fullpage.moveSlideRight()
+				 },2000)    //让slide自动滚动
+			});
+			function setNum(id,max,speed){
+				var num =0;
+				var timer = setInterval(function(){
+					num += speed;
+					if(id === "crowd") {
+						$("#"+id).html(num + "亿");
+					}else{
+						$("#"+id).html(num);
+					}
+					if(num === max){
+							$("#"+id).append('<sup>+</sup>');
+						clearInterval(timer);
+					}
+				},200);
+			}
+		</script>
+	</body>
+</html>
